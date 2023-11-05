@@ -18,6 +18,9 @@ namespace godot
 		GDCLASS(Main, Node)
 
 	public:
+		void set_mob_scene(Ref<PackedScene> p_scene);
+		Ref<PackedScene> get_mob_scene();
+
 		void _on_mob_timer_timeout();	
 
 		void _ready() override;
@@ -29,6 +32,7 @@ namespace godot
 
 	protected:
 		static void _bind_methods();
+		Ref<PackedScene> mob_scene;
 	};
 }
 #endif // !MAIN_H
