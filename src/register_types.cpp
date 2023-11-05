@@ -5,6 +5,7 @@
 
 #include "Echo3D.h"
 #include "register_types.h"
+#include "Main.h"
 
 using namespace godot;
 
@@ -15,6 +16,7 @@ void initialize_libgdextension_types(ModuleInitializationLevel p_level)
 		return;
 	}
 	ClassDB::register_class<Echo3D>();
+	ClassDB::register_class<Main>();
 }
 
 void uninitialize_libgdextension_types(ModuleInitializationLevel p_level)
