@@ -29,9 +29,7 @@ void Echo3D::_process(double delta)
 }
 
 Echo3D::Echo3D()
-{
-}
+= default;
 
 Echo3D::~Echo3D()
-{
-}
+= default;

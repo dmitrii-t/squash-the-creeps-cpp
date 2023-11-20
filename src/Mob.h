@@ -1,6 +1,6 @@
 ﻿#pragma once
-#ifndef MOB_H
-#define MOB_H
+#ifndef SQUASH_THE_CREEPS_MOB_H
+#define SQUASH_THE_CREEPS_MOB_H
 
 #include <godot_cpp/classes/character_body3d.hpp>
 #include <godot_cpp/classes/random_number_generator.hpp>
