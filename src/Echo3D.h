@@ -15,7 +15,6 @@ namespace godot
 		void echo(String msg);
 		
 		Echo3D();
-		~Echo3D();
 
 	protected:
 		static void _bind_methods();

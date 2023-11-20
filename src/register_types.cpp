@@ -7,6 +7,8 @@
 #include "register_types.h"
 #include "Main.h"
 #include "Mob.h"
+#include "Player.h"
+#include "ScoreLabel.h"
 
 using namespace godot;
 
@@ -19,6 +21,8 @@ void initialize_libgdextension_types(ModuleInitializationLevel p_level)
 	ClassDB::register_class<Echo3D>();
 	ClassDB::register_class<Main>();
 	ClassDB::register_class<Mob>();
+	ClassDB::register_class<Player>();
+	ClassDB::register_class<ScoreLabel>();
 }
 
 void uninitialize_libgdextension_types(ModuleInitializationLevel p_level)

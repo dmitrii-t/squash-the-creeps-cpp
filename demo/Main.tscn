@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://0lwhmkxe8crq"]
 
+[ext_resource type="PackedScene" uid="uid://dp478jyugrn7o" path="res://Player.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ha0ar5s2c3m4" path="res://Mob.tscn" id="3"]
+
+[sub_resource type="Curve3D" id="5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14, 0, -15, 0, 0, 0, 0, 0, 0, -13, 0, -15, 0, 0, 0, 0, 0, 0, -13, 0, 16, 0, 0, 0, 0, 0, 0, 14, 0, 16, 0, 0, 0, 0, 0, 0, 14, 0, -15),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
 [node name="Main" type="Main"]
+
+[node name="SpawnPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+curve = SubResource("5")
+
+[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 14, 0, -15)
+rotation_mode = 1
+cubic_interp = false
+loop = false
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -14,7 +34,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScoreLabel" type="Label" parent="UserInterface"]
+[node name="ScoreLabel" type="ScoreLabel" parent="UserInterface"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
