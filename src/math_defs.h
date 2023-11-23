@@ -6,9 +6,9 @@
 
 namespace godot
 {
-	#define Vector_ZERO Vector3()
-	#define Vector_UP Vector3(0, 1, 0)
-	#define Vector_FORWARD Vector3(1, 0, 0)
+	const Vector3 Vector_ZERO = Vector3();
+	const Vector3 Vector_UP = Vector3(0, 1, 0);
+	const Vector3 Vector_FORWARD = Vector3(0, 0, -1);
 }
 
 #endif

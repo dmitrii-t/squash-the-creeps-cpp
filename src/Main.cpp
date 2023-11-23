@@ -31,17 +31,12 @@ void Main::_bind_methods()
 
 void Main::_ready()
 {
-	UtilityFunctions::print("Main::_ready");
-
-	NodePath np = NodePath("UserInterface/Retry");
-	retry = get_node<Control>(np);
+	retry = get_node<Control>("UserInterface/Retry");
 	retry->hide();
 }
 
 void Main::_unhandled_input(const Ref<InputEvent> &event)
 {
-	UtilityFunctions::print("Main::_unhandled_input");
-
 	if(event->is_action_pressed("ui_accept") && retry->is_visible())
 	{
 		get_tree()->reload_current_scene();
@@ -50,13 +45,10 @@ void Main::_unhandled_input(const Ref<InputEvent> &event)
 
 void Main::_on_mob_timer_timeout()
 {
-	UtilityFunctions::print("Main::_on_mob_timer_timeout");
-
 	Mob *mob = nullptr;
 
 	// Create a new instance of the Mob scene
-	Ref<PackedScene> mob_scene = ResourceLoader::get_singleton()->load("res://Mob.tscn");
-	if(mob_scene.is_valid())
+	if(const Ref<PackedScene> mob_scene = ResourceLoader::get_singleton()->load("res://Mob.tscn"); mob_scene.is_valid())
 	{
 		// instantiate mob_scene and cast it to a Mob
 		mob = Object::cast_to<Mob>(mob_scene->instantiate());
@@ -66,10 +58,10 @@ void Main::_on_mob_timer_timeout()
 	PathFollow3D *mob_spawn_location = get_node<PathFollow3D>("SpawnPath/SpawnLocation");
 	mob_spawn_location->set_progress_ratio(UtilityFunctions::randf());
 
-	CharacterBody3D *player = get_node<CharacterBody3D>("Player");
+	const CharacterBody3D *player = get_node<CharacterBody3D>("Player");
 
 	// Communicate the spawn location and the player's location to the mob.
-	Vector3 player_position = player->get_position();
+	const Vector3 player_position = player->get_position();
 	mob->initialize(mob_spawn_location->get_position(), player_position);
 
 	add_child(mob);

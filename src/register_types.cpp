@@ -3,7 +3,6 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "Echo3D.h"
 #include "register_types.h"
 #include "Main.h"
 #include "Mob.h"
@@ -18,7 +17,6 @@ void initialize_libgdextension_types(ModuleInitializationLevel p_level)
 	{
 		return;
 	}
-	ClassDB::register_class<Echo3D>();
 	ClassDB::register_class<Main>();
 	ClassDB::register_class<Mob>();
 	ClassDB::register_class<Player>();

@@ -11,8 +11,8 @@ namespace godot
 		GDCLASS(Player, CharacterBody3D);
 		
 		void _physics_process(double delta) override;
-		void die();
 		void _onModDetector_body_entered();
+		void die();
 		
 		Player();
 		

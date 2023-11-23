@@ -32,8 +32,8 @@ namespace godot
 	
 	private:
 		RandomNumberGenerator *rng;
-		double max_speed;
-		double min_speed;
+		double max_speed = 10;
+		double min_speed = 18;
 		
 	};
 }

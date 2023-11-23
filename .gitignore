@@ -49,3 +49,11 @@ compile_commands.json
 # VSCode
 .vscode/*
 !.vscode/extensions.json
+
+# Ignore Visual Studio files
+*.sln
+*.vcxproj
+*.vsxproj.filters
+
+# Scons generated files
+.scons_env.json

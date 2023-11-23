@@ -34,7 +34,7 @@ void Player::_physics_process(double delta)
 		direction += Vector3(0, 0, -1);
 	}
 
-	Node3D *         pivot = get_node<Node3D>("Pivot");
+	Node3D          *pivot = get_node<Node3D>("Pivot");
 	AnimationPlayer *animation_player = get_node<AnimationPlayer>("AnimationPlayer");
 
 	if(direction != Vector_ZERO)
