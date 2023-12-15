@@ -11,6 +11,8 @@ using namespace godot;
 
 void Mob::_bind_methods()
 {
+	ClassDB::bind_method(D_METHOD("_on_visible_on_screen_notifier_screen_exited"), &Mob::_on_visible_on_screen_notifier_screen_exited);
+	
 	ADD_SIGNAL(MethodInfo("squashed"));
 }
 

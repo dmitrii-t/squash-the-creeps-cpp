@@ -5,16 +5,23 @@
 #include "Player.h"
 #include "Mob.h"
 #include "math_defs.h"
+#include "godot_cpp/classes/engine.hpp"
 
 using namespace godot;
 
 void Player::_bind_methods()
 {
-	
+	ClassDB::bind_method(D_METHOD("_on_MobDetector_body_entered", "body"), &Player::_on_MobDetector_body_entered);
 }
 
 void Player::_physics_process(double delta)
 {
+	// return if in editor
+	if (Engine::get_singleton()->is_editor_hint())
+	{
+		return;
+	}
+	
 	Vector3 direction = Vector_ZERO;
 
 	if(Input::get_singleton()->is_action_pressed("move_right"))
@@ -106,7 +113,7 @@ void Player::die()
 	this->queue_free();
 }
 
-void Player::_onModDetector_body_entered()
+void Player::_on_MobDetector_body_entered(Node *body)
 {
 	this->die();
 }
