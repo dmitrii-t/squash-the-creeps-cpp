@@ -2,7 +2,7 @@
 #include <godot_cpp/classes/random_number_generator.hpp>
 #include <godot_cpp/classes/animation_player.hpp>
 
-#include "math_defs.h"
+#include "math_consts.h"
 #include "Mob.h"
 
 #include "godot_cpp/variant/utility_functions.hpp"

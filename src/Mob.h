@@ -10,7 +10,8 @@ namespace godot
 	class Mob : public CharacterBody3D
 	{
 		GDCLASS(Mob, CharacterBody3D)
-		
+
+	public:
 		void initialize(Vector3 start_position, Vector3 player_position);
 		
 		void squash();

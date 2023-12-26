@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://0lwhmkxe8crq"]
+[gd_scene load_steps=13 format=3 uid="uid://0lwhmkxe8crq"]
 
 [ext_resource type="PackedScene" uid="uid://dp478jyugrn7o" path="res://Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://ha0ar5s2c3m4" path="res://Mob.tscn" id="3"]
@@ -126,7 +126,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 curve = SubResource("5")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 14, 0, -15)
+transform = Transform3D(-4.37113e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37113e-08, 14, 0, -15)
 rotation_mode = 1
 cubic_interp = false
 loop = false
@@ -150,8 +150,6 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 77.0
 offset_bottom = 42.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
 text = "Score: 0"
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]

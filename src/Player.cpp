@@ -4,7 +4,7 @@
 
 #include "Player.h"
 #include "Mob.h"
-#include "math_defs.h"
+#include "math_consts.h"
 #include "godot_cpp/classes/engine.hpp"
 
 using namespace godot;
@@ -12,6 +12,9 @@ using namespace godot;
 void Player::_bind_methods()
 {
 	ClassDB::bind_method(D_METHOD("_on_MobDetector_body_entered", "body"), &Player::_on_MobDetector_body_entered);
+
+	// Signals
+	ADD_SIGNAL(MethodInfo("hit"));
 }
 
 void Player::_physics_process(double delta)

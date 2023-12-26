@@ -9,7 +9,8 @@ namespace godot
 	class Player : public CharacterBody3D
 	{
 		GDCLASS(Player, CharacterBody3D);
-		
+
+	public:	
 		void _physics_process(double delta) override;
 		void _on_MobDetector_body_entered(Node *body);
 		void die();
