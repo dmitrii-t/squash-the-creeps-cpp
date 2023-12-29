@@ -50,10 +50,10 @@ compile_commands.json
 .vscode/*
 !.vscode/extensions.json
 
-# Ignore Visual Studio files
+# Generated VS project configs
+Run_*
 *.sln
-*.vcxproj
-*.vsxproj.filters
+*.vcxproj*
 
-# Scons generated files
-.scons_env.json
+# Hidden files
+.*
